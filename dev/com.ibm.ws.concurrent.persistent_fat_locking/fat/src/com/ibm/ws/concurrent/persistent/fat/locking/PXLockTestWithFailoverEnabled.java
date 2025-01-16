@@ -136,7 +136,7 @@ public class PXLockTestWithFailoverEnabled {
                         runInServlet("verifyTasksRunMultipleTimes");
                     } finally {
                         // wait for tasks to stop running
-                        long waitForTaskCompletions = TimeUnit.SECONDS.toMillis(10);
+                        long waitForTaskCompletions = TimeUnit.SECONDS.toMillis(60);
                         Thread.sleep(waitForTaskCompletions);
                         server.stopServer("CWWKC1511W.*CancellationException" // task execution failed because it was canceled
                         );
